@@ -96,6 +96,7 @@ const App = () => {
   return (
     <>
       <div>
+        <h1>Dafa Deposit Dashboard</h1>
         <button
           className="action-button"
           onClick={() => window.location.reload()}
@@ -113,6 +114,7 @@ const App = () => {
               <th>UTR No.</th>
               <th>Screenshot</th>
               <th>Amount</th>
+              <th>Date & Time</th>
               <th>Action</th>
             </tr>
           </thead>
