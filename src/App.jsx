@@ -11,9 +11,9 @@ const App = () => {
   const login = async () => {
     try {
       let data = JSON.stringify({
-        username: import.meta.env.VITE_REACT_APP_USERNAME,
-        password: import.meta.env.VITE_REACT_APP_PASSWORD,
-        systemId: import.meta.env.VITE_REACT_APP_SYSTEM_ID,
+        username: "Dafaexch9",
+        password: "Piou1234",
+        systemId: 10001,
       });
       let config = {
         method: "post",
