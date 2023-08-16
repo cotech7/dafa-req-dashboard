@@ -11,9 +11,9 @@ const App = () => {
   const login = async () => {
     try {
       let data = JSON.stringify({
-        username: "Dafaexch9",
-        password: "Piou1234",
-        systemId: 10001,
+        username: import.meta.env.VITE_REACT_APP_USERNAME,
+        password: import.meta.env.VITE_REACT_APP_PASSWORD,
+        systemId: import.meta.env.VITE_REACT_APP_SYSTEM_ID,
       });
       let config = {
         method: "post",
@@ -53,7 +53,7 @@ const App = () => {
 
   const fetchUsers = async (token) => {
     try {
-      console.log(token);
+      // console.log(token);
       let data = JSON.stringify({
         type: "",
         nType: "deposit",
@@ -95,7 +95,7 @@ const App = () => {
         if (!tokenFromStorage) {
           const newToken = await login();
           if (newToken) {
-            console.log(`this is newToken ${newToken}`);
+            // console.log(`this is newToken ${newToken}`);
             setToken(newToken); // Set the token state here as well
             await fetchUsers(newToken);
           }
